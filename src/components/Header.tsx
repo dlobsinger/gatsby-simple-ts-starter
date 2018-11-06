@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-interface HeaderProps {
+interface IHeaderProps {
   title: string
 }
 
-const Header: React.SFC<HeaderProps> = ({ title }) => (
+const Header: React.SFC<IHeaderProps> = ({ title }) => (
   <div
     style={{
       background: 'rebeccapurple',

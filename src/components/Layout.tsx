@@ -1,16 +1,16 @@
-import React, { ReactChildren, ReactNode } from 'react'
-import PropTypes from 'prop-types'
+import React from 'react'
+import { ReactNode } from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './Header'
 import './layout.css'
 
-interface LayoutProps {
+interface ILayoutProps {
   children?: ReactNode
 }
 
-const Layout: React.SFC<LayoutProps> = ({ children }) => (
+const Layout: React.SFC<ILayoutProps> = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -47,9 +47,5 @@ const Layout: React.SFC<LayoutProps> = ({ children }) => (
     )}
   />
 )
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
 export default Layout
